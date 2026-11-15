@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ahmed Selim Photography — قائمة أسعار الباقات</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand"><span id="brandName">Ahmed Selim Photography</span></div>
+  <a href="#booking">بيانات الحجز</a>
+</header>
+
+<main class="container">
+<section class="hero">
+  <div class="eyebrow">PHOTOGRAPHY PACKAGES</div>
+  <h1 id="heroTitle">قائمة أسعار الباقات</h1>
+  <p id="heroSubtitle">اختار باقتك وشوف السعر يتحدث قدامك أول بأول</p>
+</section>
+
+<div class="tabs" id="tabs">
+  <button class="active" data-tab="weddings">باقات الأفراح</button>
+  <button data-tab="additional">باقات إضافية</button>
+</div>
+
+<section id="weddings" class="tab-content active">
+  <div class="section-label">WEDDINGS</div>
+  <div class="cards" id="weddingCards"></div>
+</section>
+
+<section id="additional" class="tab-content">
+  <div class="section-label">ADDITIONAL PACKAGE</div>
+  <div class="additional-cards" id="additionalCards"></div>
+  <div class="extras-title">إضافات اختيارية</div>
+  <div class="extras" id="extras"></div>
+</section>
+
+<section class="notice">
+  <div>
+    <h3 id="noticeTitle">تنويه مهم</h3>
+    <p id="noticeText">جميع أسعار الباقات غير شاملة رسوم دخول الأماكن والانتقالات، ويتم الاتفاق عليها عبر واتساب.</p>
+  </div>
+  <a id="whatsappLink" class="whatsapp" href="#" target="_blank">استفسر عبر واتساب</a>
+</section>
+
+<section id="booking" class="booking">
+  <div class="section-label">BOOKING DETAILS</div>
+  <h2 id="bookingTitle">بيانات الحجز</h2>
+  <p id="bookingSubtitle">احنا محتاجين البيانات دي عشان نجهزلك العقد على طول</p>
+
+  <form id="bookingForm">
+    <div class="fields">
+      <label>اسم العروسة<input name="bride" required placeholder="مثال: مريم أحمد"></label>
+      <label>اسم العريس<input name="groom" required placeholder="مثال: أحمد محمد"></label>
+      <label>رقم تليفون العروسة<input name="bridePhone" required inputmode="tel" placeholder="01xxxxxxxxx"></label>
+      <label>رقم تليفون العريس<input name="groomPhone" required inputmode="tel" placeholder="01xxxxxxxxx"></label>
+      <label>تاريخ المناسبة<input name="date" type="date" required></label>
+      <label>مكان المناسبة<input name="place" required placeholder="اسم القاعة / المكان"></label>
+    </div>
+    <div class="summary">
+      <div><span>الباقة المختارة</span><strong id="selectedPackage">لسه ما اخترتش باقة</strong></div>
+      <div><span>إجمالي طلبك</span><strong id="total">0 ج.م</strong></div>
+    </div>
+    <button class="submit" type="submit">احجز الآن</button>
+    <div id="formMessage" class="form-message"></div>
+  </form>
+</section>
+</main>
+
+<footer><span id="footerName">Ahmed Selim Photography</span> · قائمة الأسعار قابلة للتعديل حسب تفاصيل المناسبة · الأسعار غير شاملة رسوم دخول الأماكن والانتقالات</footer>
+<script src="app.js"></script>
+</body></html>
