@@ -21,6 +21,7 @@
 <div class="tabs" id="tabs">
   <button class="active" data-tab="weddings">باقات الأفراح</button>
   <button data-tab="additional">باقات إضافية</button>
+  <button data-tab="custom">إنشاء باقة</button>
 </div>
 
 <section id="weddings" class="tab-content active">
@@ -33,6 +34,11 @@
   <div class="additional-cards" id="additionalCards"></div>
   <div class="extras-title">إضافات اختيارية</div>
   <div class="extras" id="extras"></div>
+</section>
+
+<section id="custom" class="tab-content">
+  <div class="section-label">CUSTOM PACKAGE</div>
+  <div class="custom-wrap" id="customCard"></div>
 </section>
 
 <section class="notice">
@@ -61,7 +67,19 @@
       <div><span>الباقة المختارة</span><strong id="selectedPackage">لسه ما اخترتش باقة</strong></div>
       <div><span>إجمالي طلبك</span><strong id="total">0 ج.م</strong></div>
     </div>
-    <button class="submit" type="submit">احجز الآن</button>
+    <div class="pay" id="payBox" hidden>
+      <div class="section-label">PAYMENT</div>
+      <h3>التحويل</h3>
+      <p>حوّل الأول على الرقم ده، وبعدين اكتب المبلغ واضغط الزر تحت عشان يتبعتلنا الطلب</p>
+      <div class="pay-due">إجمالي الطلب: <b id="payDue"></b></div>
+      <div class="pay-number"><strong id="payNumber" dir="ltr"></strong><button type="button" id="copyNumber">نسخ الرقم</button></div>
+      <div class="pay-methods" id="payMethods"></div>
+      <div class="fields">
+        <label>المبلغ اللي حولته (ج.م)<input name="paid" type="number" min="1" inputmode="numeric" required placeholder="مثال: 1000"></label>
+        <label>حولت من رقم / حساب (اختياري)<input name="payFrom" inputmode="tel" placeholder="01xxxxxxxxx"></label>
+      </div>
+    </div>
+    <button class="submit" id="submitBtn" type="submit">احجز الآن</button>
     <div id="formMessage" class="form-message"></div>
   </form>
 </section>
