@@ -4,14 +4,14 @@ primary:"#b68b5d",primary2:"#d2ad82",bg:"#0b0b0b",text:"#f5f1eb",
 whatsapp:"201156197655",noticeTitle:"تنويه مهم",noticeText:"جميع أسعار الباقات غير شاملة رسوم دخول الأماكن والانتقالات، ويتم الاتفاق عليها عبر واتساب.",
 bookingTitle:"بيانات الحجز",bookingSubtitle:"احنا محتاجين البيانات دي عشان نجهزلك العقد على طول",
 weddings:[
-{id:1,num:"1 HALF DAY",name:"نص يوم تصوير",price:5000,features:["تصوير سيشن زفاف","تصوير قاعة","طباعة ألبوم 30×80","بروز 50×70"]},
-{id:1,num:"1 HALF DAY",name:"نص يوم تصوير",price:5000,features:["تصوير سيشن زفاف","تصوير قاعة","طباعة ألبوم 30×80","بروز 50×70"]},
-{id:1,num:"1 HALF DAY",name:"نص يوم تصوير",price:5000,features:["تصوير سيشن زفاف","تصوير قاعة","طباعة ألبوم 30×80","بروز 50×70"]},
-{id:2,num:"2 FULL DAY",name:"يوم كامل - 12 ساعة",price:6000,features:["تصوير سيشن زفاف","تصوير تجهيزات","تصوير قاعة","طباعة ألبوم 30×80","بروز 50×70"]},
-{id:3,num:"3 DIFFERENT DAY",name:"تصوير على يومين مختلفين",price:8000,features:["تصوير سيشن زفاف","تصوير سيشن كاجوال","تصوير قاعة","طباعة ألبوم 30×80","بروز 50×70"]}],
+{id:1,num:"1 Bronze Pack",name:"ساعتين تصوير",price:3500,features:["تصوير سيشن زفاف","طباعة ألبوم 30×45","برواز 50×70","استاند 20×30"]},
+{id:2,num:"2 Silver Pack",name:"نص يوم تصوير",price:4500,features:["تصوير سيشن زفاف","تصوير قاعة","طباعة ألبوم 30×45","بروز 50×70","(2)استاند 20×30"]},
+{id:3,num:"3 Gold Pack",name:"تصوير على يومين مختلفين",price:6000,features:["تصوير سيشن زفاف","تصوير سيشن كاجوال","تصوير قاعة","طباعة ألبوم 30×80","بروز 60×90","(2)استاند 20×30"]},
+{id:4,num:"4 FULL DAY Pack",name:"يوم كامل - 12 ساعة",price:7800,features:["تصوير سيشن زفاف","تصوير تجهيزات","تصوير قاعة","طباعة ألبوم 30×80","بروز 60×90","(2)استاند 20×30"]},
+{id:5,num:"5 VIP Pack",name:"تصوير على يومين مختلفين",price:9800,features:["تصوير سيشن زفاف","تصوير سيشن كاجوال","تصوير قاعة","طباعة ألبوم 30×45","طباعة ألبوم 30×80","بروز 60×90","(2)استاند 20×30"]}],
 additional:[
-{id:1,title:"PARTY COVERING",desc:"اختار المناسبات اللي عايز تغطيتها، كل مناسبة 1,500 ج.م",price:1500,items:["زفاف","خطوبة","حنة","قاعة","كتب كتاب","كنيسة"]},
-{id:2,title:"SESSION (Soft copy)",desc:"اختار المناسبات اللي عايز سيشن لها، كل مناسبة 3,000 ج.م",price:3000,items:["زفاف","خطوبة","كتب كتاب","حنة"]}],
+{id:1,title:"PARTY COVERING",desc:"اختار المناسبات اللي عايز تغطيتها، كل مناسبة 1,500 ج.م",price:1500,items:["قاعه","حنة","خطوبة","كتب كتاب","كنيسة"]},
+{id:2,title:"SESSION (Soft copy)",desc:"اختار المناسبات اللي عايز سيشن لها، كل مناسبة 2,000 ج.م",price:2000,items:["زفاف","خطوبة","كتب كتاب"]}],
 extras:[{id:"hours",name:"ساعة إضافية",price:1000,unit:"/ ساعة"},{id:"ahmedselim",name:"مصور إضافي",price:1500,unit:""},{id:"second",name:"مصور ثانٍ",price:1000,unit:""}]
 };
 let cfg=load();
@@ -22,7 +22,7 @@ function theme(){document.documentElement.style.setProperty("--primary",cfg.prim
 function renderWedding(){weddingCards.innerHTML=cfg.weddings.map(p=>`<article class="card"><div class="num">${esc(p.num)}</div><h3>${esc(p.name)}</h3><div class="desc">${esc(p.name)}</div><ul class="features">${p.features.map(x=>`<li>${esc(x)}</li>`).join("")}</ul><div class="price">${money(p.price)}</div><button class="choose" data-package="${p.id}">اختيار الباقة</button></article>`).join("")}
 function renderAdditional(){additionalCards.innerHTML=cfg.additional.map(p=>`<article class="additional"><small class="eyebrow">${esc(p.title)}</small><h3>${esc(p.title==="PARTY COVERING"?"تغطية المناسبات":"سيشن (Soft copy)")}</h3><p>${esc(p.desc)}</p><div class="check-list">${p.items.map((x,i)=>`<label><input type="checkbox" data-add="${p.id}" data-index="${i}" data-price="${p.price}" data-name="${esc(x)}"> ${esc(x)}</label>`).join("")}</div><div class="price">${money(p.price)} <span style="font-size:12px;color:var(--muted)">لكل مناسبة</span></div></article>`).join("");
 extras.innerHTML=cfg.extras.map(x=>`<div class="extra"><small>EXTRA</small><h4>${esc(x.name)}</h4><div class="counter"><button data-minus="${x.id}">−</button><span id="count-${x.id}">0</span><button data-plus="${x.id}">+</button></div><div class="extra-price">${money(x.price)} ${esc(x.unit||"")}</div></div>`).join("")}
-let selected=null, counts={hours:0,joo:0,second:0};
+let selected=null, counts={hours:0,AHMEDSELIM:0,second:0};
 function calc(){let total=selected?.price||0;document.querySelectorAll("[data-add]:checked").forEach(x=>total+=Number(x.dataset.price));for(const x of cfg.extras) total+=(counts[x.id]||0)*x.price;document.getElementById("selectedPackage").textContent=selected?selected.name:"لسه ما اخترتش باقة";document.getElementById("total").textContent=money(total);return total}
 document.addEventListener("click",e=>{const t=e.target;if(t.dataset.tab){document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("active"));t.classList.add("active");document.querySelectorAll(".tab-content").forEach(x=>x.classList.remove("active"));document.getElementById(t.dataset.tab).classList.add("active");return}if(t.dataset.package){selected=cfg.weddings.find(x=>x.id==t.dataset.package);document.getElementById("booking").scrollIntoView({behavior:"smooth"});calc()}if(t.dataset.plus){counts[t.dataset.plus]=(counts[t.dataset.plus]||0)+1;document.getElementById("count-"+t.dataset.plus).textContent=counts[t.dataset.plus];calc()}if(t.dataset.minus){counts[t.dataset.minus]=Math.max(0,(counts[t.dataset.minus]||0)-1);document.getElementById("count-"+t.dataset.minus).textContent=counts[t.dataset.minus];calc()}});
 document.addEventListener("change",calc);
