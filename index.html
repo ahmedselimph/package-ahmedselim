@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ahmed Selim Photography — قائمة أسعار الباقات</title>
+<title>Ahmed Selim Photography — أسعار باقات التصوير</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 <section class="hero">
   <div class="eyebrow">AHMEDSELIM</div>
   <h1 id="heroTitle">قائمة أسعار الباقات</h1>
-  <p id="heroSubtitle">اختار باقتك وشوف السعر يتحدث قدامك أول بأول</p>
+  <p id="heroSubtitle">باقتك في إيدك، وسعرها قدام عينك</p>
 </section>
 
 <div class="tabs" id="tabs">
@@ -23,6 +23,8 @@
   <button data-tab="additional">باقات إضافية</button>
   <button data-tab="custom">إنشاء باقة</button>
 </div>
+
+<div class="sticky-sum" id="stickySum"><div class="sticky-in"><div class="sticky-item"><span>الباقة المختارة</span><strong id="stickyPkg">لسه ما اخترتش باقة</strong></div><div class="sticky-item"><span>الإجمالي</span><strong id="stickyTotal">0 ج.م</strong></div><a href="#booking" class="sticky-go">كمّل الحجز</a></div></div>
 
 <section id="weddings" class="tab-content active">
   <div class="section-label">WEDDINGS</div>
@@ -44,7 +46,7 @@
 <section class="notice">
   <div>
     <h3 id="noticeTitle">تنويه مهم</h3>
-    <p id="noticeText">جميع أسعار الباقات غير شاملة رسوم دخول الأماكن والانتقالات، ويتم الاتفاق عليها عبر واتساب.</p>
+    <p id="noticeText">.الباكدجات لاتشمل رسوم لوكيشنات التصوير, الباكدجات لنطاق المنصوره وقد يتم اضافه رسوم للمحافظات الاخرى, ويتم الاتفاق عليها على الواتساب</p>
   </div>
   <a id="whatsappLink" class="whatsapp" href="#" target="_blank">استفسر عبر واتساب</a>
 </section>
@@ -52,14 +54,14 @@
 <section id="booking" class="booking">
   <div class="section-label">BOOKING DETAILS</div>
   <h2 id="bookingTitle">بيانات الحجز</h2>
-  <p id="bookingSubtitle">احنا محتاجين البيانات دي عشان نجهزلك العقد على طول</p>
+  <p id="bookingSubtitle">محتاجين منك البيانات دي علشان نجهزلك العقد</p>
 
   <form id="bookingForm">
     <div class="fields">
-      <label>اسم العروسة<input name="bride" required placeholder="مثال: ياسمين أحمد"></label>
       <label>اسم العريس<input name="groom" required placeholder="مثال: أحمد ابراهيم"></label>
-      <label>رقم تليفون العروسة<input name="bridePhone" required inputmode="tel" placeholder="01xxxxxxxxx"></label>
-      <label>رقم تليفون العريس<input name="groomPhone" required inputmode="tel" placeholder="01xxxxxxxxx"></label>
+      <label>اسم العروسة<input name="bride" required placeholder="مثال: ياسمين أحمد"></label>
+      <label>رقم موبايل العريس<input name="groomPhone" required inputmode="tel" placeholder="01xxxxxxxxx"></label>
+      <label>رقم موبايل العروسة او رقم اخر<input name="bridePhone" required inputmode="tel" placeholder="01xxxxxxxxx"></label>
       <label>تاريخ المناسبة<input name="date" type="date" required></label>
       <label>مكان المناسبة<input name="place" required placeholder="اسم القاعة / المكان"></label>
     </div>
