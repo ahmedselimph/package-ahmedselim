@@ -3,8 +3,8 @@ siteName:"Ahmed Selim Photography",heroTitle:"أسعار باقات التصوي
 primary:"#a67c52",primary2:"#8b6238",bg:"#f5efe6",text:"#3b2f27",
 whatsapp:"201156197655",noticeTitle:"تنويه مهم",noticeText:"الباكدجات لاتشمل رسوم لوكيشنات التصوير, الباكدجات لنطاق المنصوره وقد يتم اضافه رسوم للمحافظات الاخرى, ويتم الاتفاق عليها على الواتساب",
 bookingTitle:"بيانات الحجز",bookingSubtitle:"محتاجين منك البيانات دي علشان نجهزلك العقد",
-custom:{title:"إنشاء باقة",desc:"اختار اللي محتاجه وشوف السعر يتحدث قدامك",groups:[
-{title:"التصوير",items:[{id:"session",name:"تصوير سيشن زفاف",price:2000},{id:"hall",name:"تصوير القاعة",price:1500},{id:"casual",name:"تصوير سيشن كاجوال",price:2000},{id:"engagement",name:"تصوير سيشن خطوبة",price:2000},{id:"katb",name:"تصوير سيشن كتب كتاب",price:2000},{id:"extraSession",name:"تصوير سيشن إضافي",price:1800},{id:"prep",name:"تصوير التجهيزات والميكب",price:2500}]},
+custom:{title:"أنشئ باقة مخصصة",desc:"اختار اللي محتاجه وشوف السعر قدامك",groups:[
+{title:"التصوير",items:[{id:"session",name:"تصوير سيشن زفاف",price:2000},{id:"hall",name:"تصوير القاعة",price:1500},{id:"engagement",name:"تصوير سيشن خطوبة",price:2000},{id:"katb",name:"تصوير سيشن كتب كتاب",price:2000},{id:"casual",name:"تصوير سيشن كاجوال",price:1800},{id:"extraSession",name:"تصوير سيشن إضافي",price:1800},{id:"prep",name:"تصوير التجهيزات والميكب",price:2500}]},
 {title:"الألبومات والبراويز",items:[{id:"album3045",name:"ألبوم 30×45",price:800},{id:"album4060",name:"ألبوم 40×60",price:1000},{id:"album3080",name:"ألبوم 30×80",price:1200},{id:"frame6090",name:"برواز 60×90",price:700},{id:"frame5070",name:"برواز 50×70",price:500},{id:"frame4050",name:"برواز 40×50",price:400},{id:"frame2030",name:"برواز 20×30",price:200}]}]},
 payNumber:"01156197655",payMethods:["InstaPay","اتصالات كاش"],
 weddings:[
